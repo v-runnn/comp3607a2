@@ -1,3 +1,5 @@
+package comp3607a2;
+
 
 public class StudentAction {
     private String textTyped;

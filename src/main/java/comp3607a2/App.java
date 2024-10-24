@@ -1,5 +1,5 @@
 package comp3607a2;
-//This is just to check the commit to determine if it works on both ends
+
 
 public class App {
     public static void main( String[] args ){
