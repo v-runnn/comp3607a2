@@ -23,6 +23,6 @@ public class QuizRecord {
         return records;
     }
     public QuizContainer createAlphabeticalIterator(){
-        return new AlphabeticIterator(records);
+        return new AlphabeticalIterator(records);
     }
 }

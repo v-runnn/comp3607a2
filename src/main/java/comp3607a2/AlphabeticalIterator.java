@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class AlphabeticIterator implements SpellingIterator{
+public class AlphabeticalIterator implements SpellingIterator{
     private List<SpellingAttempt> sortedAttempts;
     private int currentAttemptIndex = 0;
-    public AlphabeticIterator(List<SpellingAttempt> sortedAttempts) {
+    public AlphabeticalIterator(List<SpellingAttempt> sortedAttempts) {
         this.sortedAttempts = new ArrayList<SpellingAttempt> (sortedAttempts);
         Collections.sort(this.sortedAttempts, Comparator.comparing(SpellingAttempt::getSpellingWord));
     }
