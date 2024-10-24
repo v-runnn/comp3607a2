@@ -19,4 +19,19 @@ public class QuizRecord {
         }
         return s;
     }
+    public void createAlphabeticalIterator(){
+        
+    }
+    public void createCorrectIterator(){
+
+    }
+    public void createDurationIterator(){
+
+    }
+    public void createFluencyIterator(){
+
+    }
+    public void createErrorCorrectionIterator(){
+        
+    }
 }
