@@ -3,6 +3,7 @@ package comp3607a2;
 
 public class StudentAction {
     private String textTyped;
+    @SuppressWarnings("unused")
     private String word;
     private String timestamp;
     private String action;

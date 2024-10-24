@@ -19,19 +19,10 @@ public class QuizRecord {
         }
         return s;
     }
+    public List<SpellingAttempt> getRecords() {
+        return records;
+    }
     public QuizContainer createAlphabeticalIterator(){
-        return null;
-    }
-    public QuizContainer createCorrectIterator(){
-        return null;
-    }
-    public QuizContainer createDurationIterator(){
-        return null;
-    }
-    public QuizContainer createFluencyIterator(){
-        return null;
-    }
-    public QuizContainer createErrorCorrectionIterator(){
-        return null;
+        return new AlphabeticIterator(records);
     }
 }

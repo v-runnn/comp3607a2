@@ -34,5 +34,7 @@ public class SpellingAttempt {
         }
         return s;
     }
-
+    public String getSpellingWord(){
+        return spellingWord;
+    }
 }
