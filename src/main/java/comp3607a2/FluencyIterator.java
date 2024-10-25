@@ -1,9 +1,10 @@
 package comp3607a2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FluencyIterator implements SpellingIterator{
-    private List<SpellingAttempt> difficultAttempts;
+    private List<SpellingAttempt> difficultAttempts = new ArrayList<SpellingAttempt>();
     private int currentAttemptIndex =0;
     public FluencyIterator(List<SpellingAttempt> attempts){
         for (SpellingAttempt attempt : attempts){
