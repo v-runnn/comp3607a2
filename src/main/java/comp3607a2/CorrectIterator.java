@@ -1,5 +1,11 @@
 package comp3607a2;
-
+/*
+ * Name: Varun Maharaj
+ * ID: 816036536
+ * Course: Object Oriented Programming II
+ * Course Code: COMP 3607
+ * Assignment: #2
+ */
 import java.util.List;
 import java.util.ArrayList;
 public class CorrectIterator implements SpellingIterator{
@@ -26,7 +32,7 @@ public class CorrectIterator implements SpellingIterator{
         return correctAttempts.size();
     }
     @Override
-    public String printItr(){
+    public String toString(){
         String result = "#2: By Correct, Alphabetical\nNumber of elements in iteration: "+this.getLength()+"\n"+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();

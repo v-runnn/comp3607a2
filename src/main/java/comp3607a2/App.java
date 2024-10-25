@@ -1,14 +1,20 @@
 package comp3607a2;
-
+/*
+ * Name: Varun Maharaj
+ * ID: 816036536
+ * Course: Object Oriented Programming II
+ * Course Code: COMP 3607
+ * Assignment: #2
+ */
 public class App {
     public static void main( String[] args ){
         QuizRecord studentJ_log = load();
 
-        System.out.print(studentJ_log.createAlphabeticalIterator().printItr()+"\n");
-        System.out.print(studentJ_log.createCorrectIterator().printItr()+"\n");
-        System.out.print(studentJ_log.createDurationIterator().printItr()+"\n");
-        System.out.print(studentJ_log.createFluencyIterator().printItr()+"\n");
-        System.out.print(studentJ_log.createErrorCorrectionIterator().printItr()+"\n");
+        System.out.print(studentJ_log.createAlphabeticalIterator().toString()+"\n");
+        System.out.print(studentJ_log.createCorrectIterator().toString()+"\n");
+        System.out.print(studentJ_log.createDurationIterator().toString()+"\n");
+        System.out.print(studentJ_log.createFluencyIterator().toString()+"\n");
+        System.out.print(studentJ_log.createErrorCorrectionIterator().toString()+"\n");
     }
     public static QuizRecord load( ){
         QuizRecord studentJ_log = new QuizRecord();
