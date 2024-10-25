@@ -4,7 +4,7 @@ package comp3607a2;
 public class App {
     public static void main( String[] args ){
         QuizRecord studentJ_log = load();
-        System.out.println(studentJ_log.createAlphabeticalIterator().toString());
+        studentJ_log.createAlphabeticalIterator().printItr();
         // System.out.println(studentJ_log.createCorrectIterator().toString());
         // System.out.println(studentJ_log.createDurationIterator().toString());
         // System.out.println(studentJ_log.createFluencyIterator().toString());

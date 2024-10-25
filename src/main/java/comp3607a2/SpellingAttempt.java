@@ -43,7 +43,7 @@ public class SpellingAttempt {
     public String getDuration(){
         return duration;
     }
-    public double getSteps(){
+    public int getSteps(){
         return this.actions.size();
     }
     public int getErrorCorrections(){

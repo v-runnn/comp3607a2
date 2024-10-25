@@ -4,4 +4,5 @@ public interface SpellingIterator {
     SpellingAttempt next();
     Boolean hasNext();
     int getLength();
+    void printItr();
 }

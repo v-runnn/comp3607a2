@@ -29,12 +29,12 @@ public class ErrorCorrectionIterator implements SpellingIterator{
         return ecAttempts.size();
     }
     @Override
-    public String toString(){
+    public void printItr(){
         String result = "#5: By Backspace\n Number of elements in iteration: "+this.getLength()+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();
             result += attempt.getSpellingWord()+" "+attempt.getErrorCorrections()+"\n";
         }
-        return result;
+        System.out.print(result);
     }
 }
