@@ -26,12 +26,12 @@ public class CorrectIterator implements SpellingIterator{
         return correctAttempts.size();
     }
     @Override
-    public void printItr(){
+    public String printItr(){
         String result = "#2: By Correct, Alphabetical\nNumber of elements in iteration: "+this.getLength()+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();
             result += attempt.getSpellingWord() + "\n";
         }
-        System.out.print(result);
+        return(result);
     }
 }

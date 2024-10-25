@@ -4,11 +4,11 @@ public class App {
     public static void main( String[] args ){
         QuizRecord studentJ_log = load();
 
-        studentJ_log.createAlphabeticalIterator().printItr();
-        studentJ_log.createCorrectIterator().printItr();
-        studentJ_log.createDurationIterator().printItr();
-        studentJ_log.createFluencyIterator().printItr();
-        studentJ_log.createErrorCorrectionIterator().printItr();
+        System.out.print(studentJ_log.createAlphabeticalIterator().printItr()+"\n");
+        System.out.print(studentJ_log.createCorrectIterator().printItr()+"\n");
+        System.out.print(studentJ_log.createDurationIterator().printItr()+"\n");
+        System.out.print(studentJ_log.createFluencyIterator().printItr()+"\n");
+        System.out.print(studentJ_log.createErrorCorrectionIterator().printItr()+"\n");
     }
     public static QuizRecord load( ){
         QuizRecord studentJ_log = new QuizRecord();

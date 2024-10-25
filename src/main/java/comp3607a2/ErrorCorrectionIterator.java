@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class ErrorCorrectionIterator implements SpellingIterator{
-    private List<SpellingAttempt> ecAttempts = new ArrayList<SpellingAttempt>(); //"ec" is meant to stand for error corrected
+    private List<SpellingAttempt> ecAttempts = new ArrayList<SpellingAttempt>();
     private int currentAttemptIndex = 0;
     public ErrorCorrectionIterator(List<SpellingAttempt> attempts) {
         for(SpellingAttempt attempt : attempts){
@@ -30,12 +30,12 @@ public class ErrorCorrectionIterator implements SpellingIterator{
         return ecAttempts.size();
     }
     @Override
-    public void printItr(){
+    public String printItr(){
         String result = "#5: By Backspace\n Number of elements in iteration: "+this.getLength()+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();
             result += attempt.getSpellingWord()+" "+attempt.getErrorCorrections()+"\n";
         }
-        System.out.print(result);
+        return(result);
     }
 }
