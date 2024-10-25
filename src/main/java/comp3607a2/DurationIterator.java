@@ -30,4 +30,13 @@ public class DurationIterator implements SpellingIterator{
     public int getLength() {
         return attempts.size();
     }
+    @Override
+    public String toString() {
+        String result = "#3: By Duration\nNumber of elements in iteration: "+this.getLength();
+        while (this.hasNext()){
+            SpellingAttempt attempt = this.next();
+            result+=attempt.getSpellingWord()+" "+attempt.getDuration()+"\n";
+        }
+        return result;
+    }
 }

@@ -27,4 +27,13 @@ public class AlphabeticalIterator implements SpellingIterator{
     public int getLength() {
         return sortedAttempts.size();
     }
+    @Override
+    public String toString(){
+        String result = "#1: By Alphabetical\nNumber of elements in iteration: "+this.getLength();
+        while(this.hasNext()){
+            SpellingAttempt attempt = this.next();
+            result += attempt.getSpellingWord() +"\n";
+        }
+        return result;
+    }
 }

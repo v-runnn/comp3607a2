@@ -26,4 +26,13 @@ public class FluencyIterator implements SpellingIterator{
     public int getLength() {
         return difficultAttempts.size();
     }
+    @Override
+    public String toString(){
+        String result = "#4: By Fluency\nNumber of elements in iteration: "+this.getLength();
+        while (this.hasNext()){
+            SpellingAttempt attempt = this.next();
+            result+=attempt.getSpellingWord()+" "+attempt.getSteps()/(double)attempt.getSpellingWord().length()+"\n";
+        }
+        return result;
+    }
 }
