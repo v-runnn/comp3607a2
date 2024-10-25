@@ -1,10 +1,11 @@
 package comp3607a2;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class ErrorCorrectionIterator implements SpellingIterator{
-    private List<SpellingAttempt> ecAttempts; //"ec" is meant to stand for error corrected
+    private List<SpellingAttempt> ecAttempts = new ArrayList<SpellingAttempt>(); //"ec" is meant to stand for error corrected
     private int currentAttemptIndex = 0;
     public ErrorCorrectionIterator(List<SpellingAttempt> attempts) {
         for(SpellingAttempt attempt : attempts){
