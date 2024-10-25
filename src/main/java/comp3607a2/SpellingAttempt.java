@@ -37,4 +37,13 @@ public class SpellingAttempt {
     public String getSpellingWord(){
         return spellingWord;
     }
+    public boolean isCorrect(){
+        return correct;
+    }
+    public String getDuration(){
+        return duration;
+    }
+    public double getSteps(){
+        return this.actions.size();
+    }
 }

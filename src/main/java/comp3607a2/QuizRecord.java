@@ -28,22 +28,18 @@ public class QuizRecord implements QuizContainer{
     }
     @Override
     public SpellingIterator createCorrectIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createCorrectIterator'");
+        return new CorrectIterator(records);
     }
     @Override
     public SpellingIterator createDurationIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createDurationIterator'");
+        return new DurationIterator(records);
     }
     @Override
     public SpellingIterator createFluencyIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createFluencyIterator'");
+        return new FluencyIterator(records);
     }
     @Override
     public SpellingIterator createErrorCorrectionIterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createErrorCorrectionIterator'");
+        return new ErrorCorrectionIterator(records);
     }
 }

@@ -14,18 +14,17 @@ public class AlphabeticalIterator implements SpellingIterator{
     }
     @Override
     public SpellingAttempt next() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'next'");
+        if (currentAttemptIndex < sortedAttempts.size()) {
+            return sortedAttempts.get(++currentAttemptIndex);
+        }
+        return null;
     }
     @Override
     public Boolean hasNext() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'hasNext'");
+        return currentAttemptIndex < sortedAttempts.size();
     }
     @Override
     public int getLength() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLength'");
+        return sortedAttempts.size();
     }
-
 }
