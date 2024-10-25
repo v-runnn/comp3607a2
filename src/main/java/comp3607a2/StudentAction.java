@@ -27,4 +27,7 @@ public class StudentAction {
         }
         throw new IllegalArgumentException("Not a Student Action object");
     }
+    public String getAction(){
+        return this.action;
+    }
 }

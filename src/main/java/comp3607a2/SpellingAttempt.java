@@ -46,4 +46,12 @@ public class SpellingAttempt {
     public double getSteps(){
         return this.actions.size();
     }
+    public int getErrorCorrections(){
+        int numBackspace = 0;
+        for (StudentAction a: actions){
+            if (a.getAction().equals("Backspace"))
+                numBackspace++;
+        }
+        return numBackspace;
+    }
 }
