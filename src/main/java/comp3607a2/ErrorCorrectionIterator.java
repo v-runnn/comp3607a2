@@ -31,7 +31,7 @@ public class ErrorCorrectionIterator implements SpellingIterator{
     }
     @Override
     public String printItr(){
-        String result = "#5: By Backspace\n Number of elements in iteration: "+this.getLength()+"\n";
+        String result = "#5: By Backspace\nNumber of elements in iteration: "+this.getLength()+"\n"+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();
             result += attempt.getSpellingWord()+" "+attempt.getErrorCorrections()+"\n";

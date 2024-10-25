@@ -29,7 +29,7 @@ public class FluencyIterator implements SpellingIterator{
     }
     @Override
     public String printItr(){
-        String result = "#4: By Fluency\nNumber of elements in iteration: "+this.getLength()+"\n";
+        String result = "#4: By Fluency\nNumber of elements in iteration: "+this.getLength()+"\n"+"\n";
         while (this.hasNext()){
             SpellingAttempt attempt = this.next();
             result+=attempt.getSpellingWord()+" "+attempt.getSteps()/(double)attempt.getSpellingWord().length()+"\n";
