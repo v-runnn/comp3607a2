@@ -1,14 +1,14 @@
 package comp3607a2;
 
-
 public class App {
     public static void main( String[] args ){
         QuizRecord studentJ_log = load();
+
         studentJ_log.createAlphabeticalIterator().printItr();
-        // System.out.println(studentJ_log.createCorrectIterator().toString());
-        // System.out.println(studentJ_log.createDurationIterator().toString());
-        // System.out.println(studentJ_log.createFluencyIterator().toString());
-        // System.out.println(studentJ_log.createErrorCorrectionIterator().toString());
+        studentJ_log.createCorrectIterator().printItr();
+        studentJ_log.createDurationIterator().printItr();
+        studentJ_log.createFluencyIterator().printItr();
+        studentJ_log.createErrorCorrectionIterator().printItr();
     }
     public static QuizRecord load( ){
         QuizRecord studentJ_log = new QuizRecord();

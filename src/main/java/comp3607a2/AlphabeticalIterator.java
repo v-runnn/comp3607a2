@@ -1,6 +1,7 @@
 package comp3607a2;
 
 import java.util.List;
+// import java.util.NoSuchElementException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,8 +15,8 @@ public class AlphabeticalIterator implements SpellingIterator{
     }
     @Override
     public SpellingAttempt next() {
-        if (currentAttemptIndex < sortedAttempts.size()) {
-            return sortedAttempts.get(++currentAttemptIndex);
+        if (hasNext()) {
+            return sortedAttempts.get(currentAttemptIndex++);
         }
         return null;
     }
@@ -29,7 +30,7 @@ public class AlphabeticalIterator implements SpellingIterator{
     }
     @Override
     public void printItr(){
-        String result = "#1: By Alphabetical\nNumber of elements in iteration: "+this.getLength();
+        String result = "#1: By Alphabetical\nNumber of elements in iteration: "+this.getLength()+"\n";
         while(this.hasNext()){
             SpellingAttempt attempt = this.next();
             result += attempt.getSpellingWord() +"\n";

@@ -13,8 +13,8 @@ public class FluencyIterator implements SpellingIterator{
     }
     @Override
     public SpellingAttempt next() {
-        if (currentAttemptIndex < difficultAttempts.size()) {
-            return difficultAttempts.get(++currentAttemptIndex);
+        if (hasNext()) {
+            return difficultAttempts.get(currentAttemptIndex++);
         }
         return null;
     }

@@ -12,8 +12,8 @@ public class CorrectIterator implements SpellingIterator{
     }
     @Override
     public SpellingAttempt next() {
-        if(currentAttemptIndex <  correctAttempts.size()){
-            return correctAttempts.get(++currentAttemptIndex);
+        if(hasNext()){
+            return correctAttempts.get(currentAttemptIndex++);
         }
         return null;
     }

@@ -15,8 +15,8 @@ public class DurationIterator implements SpellingIterator{
 
     @Override
     public SpellingAttempt next() {
-        if(currentAttemptIndex < attempts.size()){
-            return attempts.get(++currentAttemptIndex);
+        if(hasNext()){
+            return attempts.get(currentAttemptIndex++);
         }
         return null;
     }
@@ -32,7 +32,7 @@ public class DurationIterator implements SpellingIterator{
     }
     @Override
     public void printItr() {
-        String result = "#3: By Duration\nNumber of elements in iteration: "+this.getLength();
+        String result = "#3: By Duration\nNumber of elements in iteration: "+this.getLength()+"\n";
         while (this.hasNext()){
             SpellingAttempt attempt = this.next();
             result+=attempt.getSpellingWord()+" "+attempt.getDuration()+"\n";

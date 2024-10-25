@@ -15,8 +15,8 @@ public class ErrorCorrectionIterator implements SpellingIterator{
     }
     @Override
     public SpellingAttempt next() {
-        if(currentAttemptIndex < ecAttempts.size())
-            return ecAttempts.get(++currentAttemptIndex);
+        if(hasNext())
+            return ecAttempts.get(currentAttemptIndex++);
         return null;
     }
     @Override
