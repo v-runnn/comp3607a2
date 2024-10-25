@@ -10,7 +10,7 @@ public class DurationIterator implements SpellingIterator{
     private int currentAttemptIndex = 0;
     public DurationIterator(List<SpellingAttempt> attempts) {
         this.attempts = new ArrayList<SpellingAttempt>(attempts);
-        Collections.sort(this.attempts, Comparator.comparing(SpellingAttempt::getDuration));
+        Collections.sort(this.attempts, Comparator.comparingInt(SpellingAttempt::getDuration));
     }
 
     @Override

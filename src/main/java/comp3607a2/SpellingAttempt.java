@@ -40,8 +40,8 @@ public class SpellingAttempt {
     public boolean isCorrect(){
         return correct;
     }
-    public String getDuration(){
-        return duration;
+    public int getDuration(){
+        return Integer.valueOf(this.duration);
     }
     public int getSteps(){
         return this.actions.size();
